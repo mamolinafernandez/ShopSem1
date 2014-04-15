@@ -13,3 +13,4 @@
 
 # Ignore the default MySQL database.
 /config/database.yml
+.DS_Store
