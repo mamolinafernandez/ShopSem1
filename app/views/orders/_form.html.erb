@@ -35,6 +35,14 @@
     <%= f.label :shipping_city %><br>
     <%= f.text_field :shipping_city %>
   </div>
+
+  <%= f.label :products, "Products:" %>
+    <ol>  
+    <%= f.fields_for :line_items do |builder| %>
+      <%= render "line_item_fields", :f => builder %>
+    <% end %>
+    </ol>
+
   <div class="actions">
     <%= f.submit %>
   </div>

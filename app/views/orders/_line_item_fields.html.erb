@@ -1,0 +1,16 @@
+<div class="fields">
+
+      <li>
+      <%= f.collection_select :product_id, Product.all, :id, :name %>
+      <%= f.label :quantity, "Quantity" %>
+      <%= f.number_field :quantity %>
+
+      <%= f.label :price, "Price" %>
+      <%= f.number_field :price %>
+
+      <%= f.hidden_field :id %>
+      <%= f.hidden_field :_destroy %>
+      <%= link_to "Borrar Producto", "#", class: "del_product" %>
+
+      </li>
+</div>

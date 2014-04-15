@@ -30,5 +30,8 @@
   <%= @order.shipping_city %>
 </p>
 
+<ol>
+<%= render @order.line_items %></ol>  
+
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
