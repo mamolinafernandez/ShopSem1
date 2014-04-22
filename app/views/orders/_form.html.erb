@@ -42,8 +42,9 @@
       <%= render "line_item_fields", :f => builder %>
     <% end %>
     </ol>
+      <%= link_to_add_fields "Add new line", f, :line_items %>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Save changes', :class => 'btn btn-order' %>
   </div>
 <% end %>

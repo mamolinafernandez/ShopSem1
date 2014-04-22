@@ -1,4 +1,10 @@
 ShopSem1::Application.routes.draw do
+
+  delete 'session' => 'sessions#destroy'
+  resources :sessions
+
+  resources :users
+
   resources :orders
 
   resources :products
@@ -7,7 +13,8 @@ ShopSem1::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'products#index'
+  #root 'products#index'
+  root 'sessions#login'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

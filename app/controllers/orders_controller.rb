@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
+  before_action :require_login
 
   # GET /orders
   # GET /orders.json
@@ -70,6 +71,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:status, :payment_method, :customer_name, :customer_surname, :shipping_address, :shipping_city, line_items_attributes: [:id, :product_id, :quantity, :price])
+      params.require(:order).permit(:status, :payment_method, :customer_name, :customer_surname, :shipping_address, :shipping_city, line_items_attributes: [:id, :product_id, :quantity, :price, :_destroy])
     end
 end

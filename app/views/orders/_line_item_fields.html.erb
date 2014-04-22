@@ -2,6 +2,7 @@
 
       <li>
       <%= f.collection_select :product_id, Product.all, :id, :name %>
+
       <%= f.label :quantity, "Quantity" %>
       <%= f.number_field :quantity %>
 
